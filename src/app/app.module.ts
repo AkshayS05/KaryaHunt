@@ -5,13 +5,17 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { BannerComponent } from './components/banner/banner.component';
+import { CardComponent } from './components/card/card.component';
+import { ExperiencePipe } from './pipes/experiencePipe/experience.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    BannerComponent
+    BannerComponent,
+    CardComponent,
+    ExperiencePipe
   ],
   imports: [
     BrowserModule
