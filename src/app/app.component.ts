@@ -13,4 +13,11 @@ import { cardData } from './components/card/card.data';
 export class AppComponent {
   title = 'karya_hunt';
   cards: Card[] = cardData;
+
+  currentSelectedCard!: Card;
+
+  handleCardSelect(card:Card){
+    this.currentSelectedCard = card;
+    console.log(this.currentSelectedCard);
+  }
 }
