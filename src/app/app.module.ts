@@ -8,6 +8,8 @@ import { BannerComponent } from './components/banner/banner.component';
 import { CardComponent } from './components/card/card.component';
 import { ExperiencePipe } from './pipes/experiencePipe/experience.pipe';
 import { DatePipe } from './pipes/datePipe/date.pipe';
+import { DatePostedComponent } from './components/date-posted/date-posted.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -17,10 +19,12 @@ import { DatePipe } from './pipes/datePipe/date.pipe';
     BannerComponent,
     CardComponent,
     ExperiencePipe,
-    DatePipe
+    DatePipe,
+    DatePostedComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

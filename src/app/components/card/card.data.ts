@@ -10,7 +10,7 @@ export const cardData: Card[] = [
     company: 'Amazon',
     thumbnail: "https://i.dummyjson.com/data/products/7/thumbnail.jpg",
     experience: 7,
-    date: new Date(2023, 5, 28),
+    date: new Date(2023, 4, 31),
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ export const cardData: Card[] = [
     company: 'Kubra',
     thumbnail: "https://i.dummyjson.com/data/products/7/thumbnail.jpg",
     experience: 7,
-    date: new Date(2023, 5, 29),
+    date: new Date(2023, 4, 31),
   },
   {
     id: 3,

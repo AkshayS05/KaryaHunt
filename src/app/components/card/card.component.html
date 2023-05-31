@@ -1,4 +1,5 @@
 <div class="card">
+  <app-date-posted [date]="card.date" class="posted_today"></app-date-posted>
   <img [ngStyle]="{ 'height': '260px'}" [src]="card.thumbnail" class="card-img-top" [alt]="card.subTitle">
   <div class="card-body">
     <h5 class="card-title"> {{ card.title }}</h5>

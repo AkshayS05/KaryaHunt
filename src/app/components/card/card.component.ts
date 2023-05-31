@@ -9,4 +9,6 @@ import { Card } from 'src/app/card.model';
 export class CardComponent {
   @Input() card!:Card;
 
+
+
 }
