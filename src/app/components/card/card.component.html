@@ -11,6 +11,7 @@
     </li>
     <li class="list-group-item">Stock: {{ card.company }}</li>
     <li class="list-group-item">Experience: {{ card.experience |experience }}</li>
+    <li class="list-group-item">Posted: {{ card.date | date }}</li>
   </ul>
   <div class="card-body">
     <a href="#" class="btn btn-dark">More Info</a>

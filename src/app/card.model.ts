@@ -7,4 +7,5 @@ export interface Card {
   company: string;
   thumbnail: string;
   experience: number;
+  date: Date;
 }

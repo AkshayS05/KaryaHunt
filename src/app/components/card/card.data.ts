@@ -1,7 +1,5 @@
 import { Card } from "src/app/card.model";
 
-
-
 export const cardData: Card[] = [
   {
     id: 1,
@@ -11,7 +9,8 @@ export const cardData: Card[] = [
     skills: ['NodeJs', 'REST APIs', 'Docker', 'GraphQL'],
     company: 'Amazon',
     thumbnail: "https://i.dummyjson.com/data/products/7/thumbnail.jpg",
-    experience: 7
+    experience: 7,
+    date: new Date(2023, 5, 28),
   },
   {
     id: 2,
@@ -21,7 +20,8 @@ export const cardData: Card[] = [
     skills: ['.NET', 'AWS', 'Docker', 'GatsbyJS'],
     company: 'Kubra',
     thumbnail: "https://i.dummyjson.com/data/products/7/thumbnail.jpg",
-    experience: 7
+    experience: 7,
+    date: new Date(2023, 5, 29),
   },
   {
     id: 3,
@@ -31,7 +31,8 @@ export const cardData: Card[] = [
     skills: ['ReactJs', 'NodeJs', 'MySQL', 'Docker'],
     company: 'CarFax',
     thumbnail: "https://i.dummyjson.com/data/products/7/thumbnail.jpg",
-    experience: 3
+    experience: 3,
+    date: new Date(2023, 26, 5),
   },
   {
     id: 4,
@@ -41,7 +42,8 @@ export const cardData: Card[] = [
     skills: ['Html', 'Bootstrap', 'JavaScript', 'Angular'],
     company: 'Apple',
     thumbnail: "https://images.unsplash.com/photo-1503852460961-aa7ffdd3d64d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
-    experience: 2
+    experience: 2,
+    date: new Date(2023, 5, 27),
   },
   {
     id: 5,
@@ -51,7 +53,8 @@ export const cardData: Card[] = [
     skills: ['NodeJs', 'ExpressJs', 'MongoDB', 'EJS'],
     company: 'Cognizant',
     thumbnail: "https://i.dummyjson.com/data/products/7/thumbnail.jpg",
-    experience: 10
+    experience: 10,
+    date: new Date(2023, 5, 30),
   },
   {
     id: 6,
@@ -61,7 +64,8 @@ export const cardData: Card[] = [
     skills: ['Html', 'Css', 'JavaScript', 'ReactJS'],
     company: 'Apple',
     thumbnail: "https://i.dummyjson.com/data/products/7/thumbnail.jpg",
-    experience: 2
+    experience: 2,
+    date: new Date(2023, 4, 30),
   }
 ]
 
