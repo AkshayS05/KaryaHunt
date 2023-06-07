@@ -10,6 +10,10 @@ import { ExperiencePipe } from './pipes/experiencePipe/experience.pipe';
 import { DatePipe } from './pipes/datePipe/date.pipe';
 import { DatePostedComponent } from './components/date-posted/date-posted.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HomeComponent } from './pages/home/home.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { ProductsComponent } from './pages/products/products.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -20,13 +24,13 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     CardComponent,
     ExperiencePipe,
     DatePipe,
-    DatePostedComponent
+    DatePostedComponent,
+    HomeComponent,
+    ContactComponent,
+    ProductsComponent,
   ],
-  imports: [
-    BrowserModule,
-    FontAwesomeModule
-  ],
+  imports: [BrowserModule, FontAwesomeModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

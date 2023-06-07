@@ -1,22 +1,26 @@
 <div class="card">
   <app-date-posted [date]="card.date" class="posted_today"></app-date-posted>
-  <img [ngStyle]="{ 'height': '260px'}" [src]="card.thumbnail" class="card-img-top" [alt]="card.subTitle">
+  <img
+    [ngStyle]="{ height: '260px' }"
+    [src]="card.thumbnail"
+    class="card-img-top"
+    [alt]="card.subTitle"
+  />
   <div class="card-body">
-    <h5 class="card-title"> {{ card.title }}</h5>
-    <p class="card-text"> {{ (card.subTitle)}}
-    </p>
+    <h5 class="card-title">{{ card.title }}</h5>
+    <p class="card-text">{{ card.subTitle }}</p>
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item">Location: {{ card.location }}</li>
-    <li class="list-group-item">Skills: {{card.skills}}
+    <li class="list-group-item">Skills: {{ card.skills }}</li>
+    <li class="list-group-item">Company: {{ card.company }}</li>
+    <li class="list-group-item">
+      Experience: {{ card.experience | experience }}
     </li>
-    <li class="list-group-item">Stock: {{ card.company }}</li>
-    <li class="list-group-item">Experience: {{ card.experience |experience }}</li>
     <li class="list-group-item">Posted: {{ card.date | date }}</li>
   </ul>
   <div class="card-body">
     <a href="#" class="btn btn-dark">More Info</a>
-    <button (click)="handleClick()"
-      class="ms-3 btn">Apply</button>
+    <button (click)="handleClick()" class="ms-3 btn">Apply</button>
   </div>
 </div>
