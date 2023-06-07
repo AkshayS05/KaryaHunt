@@ -1,24 +1,3 @@
 <app-navbar></app-navbar>
-<app-banner></app-banner>
-
-<section class="pt-4">
-  <div class="container px-lg-5">
-    <!-- Page Features-->
-
-    <div class="row gx-lg-5">
-      <!-- directive -->
-      <!-- structural directive--changing the structure of the DOM -->
-      <div class="openings-heading">
-        <h2 class="text-center">Recent Openings</h2>
-      </div>
-      <div *ngFor="let cardItem of cards" class="col-lg-6 col-xxl-4 mb-5">
-        <!-- here $event is a reserved keyword to get data from the child passed to its parent -->
-        <app-card
-          (onCardSelect)="handleCardSelect($event)"
-          [card]="cardItem"
-        ></app-card>
-      </div>
-    </div>
-  </div>
-  <app-footer></app-footer>
-</section>
+<router-outlet></router-outlet>
+<app-footer></app-footer>

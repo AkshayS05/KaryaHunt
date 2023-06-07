@@ -1,14 +1,28 @@
 import { Injectable } from '@angular/core';
-import { cardData } from '../components/card/card.data';
+import { HttpClient } from '@angular/common/http';
+import { Card } from '../card.model';
+import { map, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class JobsService {
-  private cardData = cardData;
-  constructor() {}
+  //here if we are getting data from the backend
+  constructor(private http: HttpClient) {}
 
-  getCardData() {
-    return this.cardData;
+  getCardData(): Observable<any> {
+    return this.http
+      .get('https://karyahunt-add5f-default-rtdb.firebaseio.com/jobs.json')
+      .pipe(
+        map((responseObj) => {
+          const resultArr = [];
+          const objResponse = responseObj as Card[];
+          for (let item in objResponse) {
+            resultArr.push({ ...objResponse[item], id: item });
+          }
+          console.log(resultArr);
+          return resultArr;
+        })
+      );
   }
 }

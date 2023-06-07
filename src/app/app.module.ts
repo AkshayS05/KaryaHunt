@@ -12,8 +12,9 @@ import { DatePostedComponent } from './components/date-posted/date-posted.compon
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HomeComponent } from './pages/home/home.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import { ProductsComponent } from './pages/products/products.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { JobsComponent } from './pages/jobs/jobs.component';
 
 @NgModule({
   declarations: [
@@ -27,9 +28,14 @@ import { AppRoutingModule } from './app-routing.module';
     DatePostedComponent,
     HomeComponent,
     ContactComponent,
-    ProductsComponent,
+    JobsComponent,
   ],
-  imports: [BrowserModule, FontAwesomeModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    FontAwesomeModule,
+    HttpClientModule,
+    AppRoutingModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
