@@ -16,6 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { JobsComponent } from './pages/jobs/jobs.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { JobDetailComponent } from './pages/job-detail/job-detail.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     JobsComponent,
 
     NotFoundComponent,
+     JobDetailComponent,
   ],
   imports: [
     BrowserModule,
