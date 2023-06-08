@@ -1,1 +1,27 @@
-<p>jobs works!</p>
+<div class="container mt-4">
+  <div class="container_title">
+    <h1 class="mb-4">Jobs 💼</h1>
+  </div>
+  <!-- do not put any div, like react fragments -->
+  <ng-container *ngIf="jobs$ | async as jobs">
+    <div *ngFor="let category of getCategories(jobs)" class="card-mb-4">
+      <div class="card-header text-bg-black">
+        <strong
+          ><span [ngStyle]="{ 'text-transform': 'capitalize' }">
+            {{ category }} ({{ jobs[category].length }}postings)
+          </span></strong
+        >
+      </div>
+      <div class="card-body">
+        <div class="row gx-lg-5">
+          <div
+            *ngFor="let card of jobs[category]"
+            class="col-lg-4 col-xxl-4 mb-5"
+          >
+            <app-card [card]="card"></app-card>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

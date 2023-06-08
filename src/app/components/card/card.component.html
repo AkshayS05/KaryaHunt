@@ -20,7 +20,9 @@
     <li class="list-group-item">Posted: {{ card.date | date }}</li>
   </ul>
   <div class="card-body">
-    <a href="#" class="btn btn-dark job_info">More Info</a>
+    <a [routerLink]="['/jobs', card.id]" class="btn btn-dark job_info"
+      >More Info</a
+    >
     <button (click)="handleClick()" class="ms-3 btn">Apply</button>
   </div>
 </div>
