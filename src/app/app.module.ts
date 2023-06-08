@@ -15,6 +15,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { JobsComponent } from './pages/jobs/jobs.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,8 @@ import { JobsComponent } from './pages/jobs/jobs.component';
     HomeComponent,
     ContactComponent,
     JobsComponent,
+
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,

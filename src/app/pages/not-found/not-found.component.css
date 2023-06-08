@@ -1,0 +1,8 @@
+.home_page {
+  background-color: #9abb60;
+  border: none;
+}
+.home_page:hover {
+  background-color: #647a3d;
+  color: #fff;
+}
