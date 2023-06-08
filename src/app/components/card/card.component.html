@@ -7,7 +7,7 @@
     [alt]="card.subTitle"
   />
   <div class="card-body">
-    <h5 class="card-title">{{ card.title }}</h5>
+    <h5 class="card-title">{{ card.title | uppercase }}</h5>
     <p class="card-text">{{ card.subTitle }}</p>
   </div>
   <ul class="list-group list-group-flush">
@@ -17,10 +17,10 @@
     <li class="list-group-item">
       Experience: {{ card.experience | experience }}
     </li>
-    <!-- <li class="list-group-item">Posted: {{ card.date | date }}</li> -->
+    <li class="list-group-item">Posted: {{ card.date | date }}</li>
   </ul>
   <div class="card-body">
-    <a href="#" class="btn btn-dark">More Info</a>
+    <a href="#" class="btn btn-dark job_info">More Info</a>
     <button (click)="handleClick()" class="ms-3 btn">Apply</button>
   </div>
 </div>

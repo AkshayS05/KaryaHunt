@@ -4,34 +4,39 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'date',
 })
 export class DatePipe implements PipeTransform {
-  transform(value: string): string {
-    // const month= value.getMonth();
-    // const date= value.getDate();
+  transform(value: Date | string): string {
+    const dateObj = typeof value === 'string' ? new Date(value) : value;
 
-    // let currentDate= new Date();
-    // let today = currentDate.getDate();
-    // let currentMonth = currentDate.getMonth();
+    if (isNaN(dateObj.getTime())) {
+      return '';
+    }
 
-    //   if(today == date && currentMonth == month ){
-    //     return 'Posted Today';
-    //   }
-    //   if(today - date ==1 && currentMonth == month){
-    //     return 'Posted Yesterday';
-    //   }
-    //   if(today - date ==2 && currentMonth == month){
-    //     return 'Posted Two days ago'
-    //   }
-    //   if(today - date >2 && currentMonth == month){
-    //     return 'Posted few days ago'
-    //   }
-    //   if(currentMonth - month ==1){
-    //     return "Posted a month ago"
-    //   }
-    //   if(currentMonth - month >1){
-    //     return "Posted few months ago"
-    //   }
+    const month = dateObj.getMonth();
+    const date = dateObj.getDate();
 
-    // return value.toString();
-    return '';
+    let currentDate = new Date();
+    let today = currentDate.getDate();
+    let currentMonth = currentDate.getMonth();
+
+    if (today == date && currentMonth == month) {
+      return 'Posted Today';
+    }
+    if (today - date == 1 && currentMonth == month) {
+      return 'Posted Yesterday';
+    }
+    if (today - date == 2 && currentMonth == month) {
+      return 'Posted Two days ago';
+    }
+    if (today - date > 2 && currentMonth == month) {
+      return 'Posted few days ago';
+    }
+    if (currentMonth - month == 1) {
+      return 'Posted a month ago';
+    }
+    if (currentMonth - month > 1) {
+      return 'Posted few months ago';
+    }
+
+    return dateObj.toString();
   }
 }

@@ -1,9 +1,18 @@
-.posted_today{
-  position: absolute; 
-  top: 10px; 
+.posted_today {
+  position: absolute;
+  top: 10px;
   left: 10px;
   height: 2rem;
   width: 2rem;
   text-align: center;
- 
+}
+.job_info {
+  border: none;
+  background-color: #647a3d;
+  color: #fff;
+  transition: background-color 0.5s, color 0.5s;
+}
+.job_info:hover {
+  background-color: #9abb60;
+  color: #000;
 }

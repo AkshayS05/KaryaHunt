@@ -1,3 +1,10 @@
 .bg-light-green {
-  background-color: #DAF7A6;
+  background-color: #daf7a6;
+}
+.customActive {
+  font-size: 20px;
+  font-weight: bold;
+}
+.logo {
+  font-weight: 700;
 }

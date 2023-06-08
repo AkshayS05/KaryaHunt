@@ -1,19 +1,19 @@
 import { Component, Input } from '@angular/core';
-import {faCheck} from '@fortawesome/free-solid-svg-icons';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { DatePipe } from 'src/app/pipes/datePipe/date.pipe';
 
 @Component({
   selector: 'app-date-posted',
   templateUrl: './date-posted.component.html',
   styleUrls: ['./date-posted.component.css'],
-  providers: [DatePipe]
+  providers: [DatePipe],
 })
-
-
 export class DatePostedComponent {
   @Input() date!: Date;
 
-  get isPostedToday(){
+  constructor(private datePipe: DatePipe) {}
+
+  get isPostedToday() {
     let today = new Date();
     let todayDate = today.getDate();
     let month = today.getMonth();
@@ -24,6 +24,8 @@ export class DatePostedComponent {
 
     return todayDate === dataDate && month === dataMonth;
   }
-  
-  faCheck= faCheck;
+  formatDate(): string {
+    return this.datePipe.transform(this.date);
+  }
+  faCheck = faCheck;
 }
