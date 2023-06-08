@@ -17,6 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { JobsComponent } from './pages/jobs/jobs.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { JobDetailComponent } from './pages/job-detail/job-detail.component';
+import { HoverDirective } from './directives/hover.directive';
+import { JobsbylevelComponent } from './pages/jobsbylevel/jobsbylevel.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { JobDetailComponent } from './pages/job-detail/job-detail.component';
 
     NotFoundComponent,
      JobDetailComponent,
+     HoverDirective,
+     JobsbylevelComponent,
   ],
   imports: [
     BrowserModule,

@@ -16,6 +16,7 @@ export class JobsComponent {
   }
 
   getCategories(jobs: any) {
+    console.log(jobs);
     return Object.keys(jobs);
   }
 }

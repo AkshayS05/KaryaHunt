@@ -4,26 +4,23 @@
     <a
       class="nav-link jobs_by_level"
       routerLinkActive="customActive"
-      routerLink="/jobs/level"
-      >By Level</a
+      routerLink="/jobs"
+      >By Category</a
     >
   </div>
   <!-- do not put any div, like react fragments -->
   <ng-container *ngIf="jobs$ | async as jobs">
-    <div *ngFor="let category of getCategories(jobs)" class="card-mb-4">
+    <div *ngFor="let level of getjobBySkillLevel(jobs)" class="card-mb-4">
       <div class="card-header text-bg-black">
         <strong
           ><span [ngStyle]="{ 'text-transform': 'capitalize' }">
-            {{ category }} ({{ jobs[category].length }}postings)
+            ({{ jobs[level].length }}postings)
           </span></strong
         >
       </div>
       <div class="card-body">
         <div class="row gx-lg-5">
-          <div
-            *ngFor="let card of jobs[category]"
-            class="col-lg-4 col-xxl-4 mb-5"
-          >
+          <div *ngFor="let card of jobs[level]" class="col-lg-4 col-xxl-4 mb-5">
             <app-card [card]="card"></app-card>
           </div>
         </div>

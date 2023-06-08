@@ -13,3 +13,33 @@ body {
 .appMain {
   flex-grow: 1;
 }
+.boxShadow {
+  -webkit-box-shadow: 7px 4px 17px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 4px 17px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 7px 4px 17px 0px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+.container_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.jobs_by_level {
+  width: 150px;
+  height: 40px;
+  margin-left: 50rem;
+  border-radius: 10px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #9abb60;
+  color: #000;
+  transition: background-color 0.5s, color 0.5s;
+  text-align: center;
+}
+
+.jobs_by_level:hover {
+  background-color: #647a3d;
+  color: #fff;
+}
