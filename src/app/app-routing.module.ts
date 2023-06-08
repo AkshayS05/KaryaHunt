@@ -7,6 +7,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { JobDetailComponent } from './pages/job-detail/job-detail.component';
 import { JobsbylevelComponent } from './pages/jobsbylevel/jobsbylevel.component';
+import { AdminComponent } from './pages/admin/admin.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -15,6 +16,7 @@ const appRoutes: Routes = [
   { path: 'jobs/level', component: JobsbylevelComponent },
   { path: 'jobs/:jobId', component: JobDetailComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'admin', component: AdminComponent },
   { path: '**', component: NotFoundComponent },
 ];
 

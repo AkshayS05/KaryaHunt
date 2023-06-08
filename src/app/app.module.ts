@@ -19,6 +19,8 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { JobDetailComponent } from './pages/job-detail/job-detail.component';
 import { HoverDirective } from './directives/hover.directive';
 import { JobsbylevelComponent } from './pages/jobsbylevel/jobsbylevel.component';
+import { AdminComponent } from './pages/admin/admin.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -35,12 +37,14 @@ import { JobsbylevelComponent } from './pages/jobsbylevel/jobsbylevel.component'
     JobsComponent,
 
     NotFoundComponent,
-     JobDetailComponent,
-     HoverDirective,
-     JobsbylevelComponent,
+    JobDetailComponent,
+    HoverDirective,
+    JobsbylevelComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     FontAwesomeModule,
     HttpClientModule,
     AppRoutingModule,

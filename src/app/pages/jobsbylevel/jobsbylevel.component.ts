@@ -16,7 +16,6 @@ export class JobsbylevelComponent {
   }
 
   getjobBySkillLevel(jobs: any) {
-    console.log(jobs);
     return Object.keys(jobs);
   }
 }

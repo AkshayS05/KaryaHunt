@@ -19,7 +19,6 @@ export class HomeComponent {
   //here component is completely built
   ngOnInit(): void {
     this.cards$ = this.jobsService.getCardData();
-    console.log(this.cards$);
   }
 
   handleCardSelect(card: Card) {
