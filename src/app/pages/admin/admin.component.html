@@ -1,6 +1,8 @@
 <div class="container mt-4">
   <h1 class="mb-4">Post new Job 📝</h1>
-
+  <ng-container *ngIf="isFormSubmitted">
+    <div class="alert alert-success" role="alert">Submitted Successfully!</div>
+  </ng-container>
   <form #f="ngForm" (ngSubmit)="onFormSubmit(f)">
     <div class="mb-3">
       <label class="form-label">Job Title</label>
@@ -160,8 +162,13 @@
         required
         class="form-control"
         placeholder="Date"
+        [max]="getCurrentDate()"
+        [min]="getCurrentDate()"
       />
-      <div *ngIf="" class="text-danger fs-6 fst-italic">
+      <div
+        *ngIf="!date.valid && date.touched"
+        class="text-danger fs-6 fst-italic"
+      >
         Please provide a date
       </div>
     </div>
