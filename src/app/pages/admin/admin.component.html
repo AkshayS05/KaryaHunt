@@ -2,35 +2,41 @@
   <h1 class="mb-4">Post new Job</h1>
 
   <form #f="ngForm" (ngSubmit)="onFormSubmit(f)">
-    <pre> {{ f.value | json }} </pre>
     <div class="mb-3">
       <label class="form-label">Job Title</label>
       <input
         required
         name="title"
-        #header=""
-        [ngClass]=""
+        #title="ngModel"
+        [ngClass]="{ 'is-invalid': !title.valid && title.touched }"
         ngModel
         type="text"
         class="form-control"
         placeholder="Job Title"
       />
-      <div *ngIf="" class="text-danger">This field is required</div>
+      <div *ngIf="!title.valid && title.touched" class="text-danger">
+        Title is required
+      </div>
     </div>
 
     <div class="mb-3">
       <label class="form-label">Job Description</label>
       <input
         required
-        #subHeader=""
-        [ngClass]=""
+        #description="ngModel"
+        [ngClass]="{ 'is-invalid': !description.valid && description.touched }"
         name="description"
         ngModel
         type="text"
         class="form-control"
         placeholder="Job Description"
       />
-      <div *ngIf="" class="text-danger">Description is required</div>
+      <div
+        *ngIf="!description.valid && description.touched"
+        class="text-danger"
+      >
+        Description is required
+      </div>
     </div>
     <!-- location -->
 
@@ -38,8 +44,8 @@
       <label class="form-label">Location</label>
       <select
         name="location"
-        [ngClass]=""
-        #category=""
+        [ngClass]="{ 'is-invalid': !location.valid && !location.touched }"
+        #location="ngModel"
         ngModel
         required
         class="form-select"
@@ -63,7 +69,10 @@
         <option value="Banglore, India">Banglore, India</option>
         <option value="Chennai, India">Chennai, India</option>
       </select>
-      <div *ngIf="" class="text-danger fs-6 fst-italic">
+      <div
+        *ngIf="!location.valid && !location.touched"
+        class="text-danger fs-6 fst-italic"
+      >
         Please provide a location
       </div>
     </div>
@@ -72,8 +81,8 @@
       <label class="form-label">Skills</label>
       <input
         name="skills"
-        [ngClass]=""
-        #brand=""
+        [ngClass]="{ 'is-invalid': !skills.valid && skills.touched }"
+        #skills="ngModel"
         ngModel
         type="text"
         required
@@ -88,8 +97,8 @@
     <div class="mb-3">
       <label class="form-label">Company</label>
       <input
-        [ngClass]=""
-        #discount=""
+        [ngClass]="{ 'is-invalid': !company.valid && company.touched }"
+        #company="ngModel"
         name="company"
         ngModel
         type="text"
@@ -97,7 +106,10 @@
         class="form-control"
         placeholder="Organization"
       />
-      <div *ngIf="" class="text-danger fs-6 fst-italic">
+      <div
+        *ngIf="!company.valid && company.touched"
+        class="text-danger fs-6 fst-italic"
+      >
         Please provide a company name
       </div>
     </div>
@@ -105,8 +117,8 @@
     <div class="mb-3">
       <label class="form-label">Experience</label>
       <input
-        [ngClass]=""
-        #price=""
+        [ngClass]="{ 'is-invalid': !experience.valid && experience.touched }"
+        #experience="ngModel"
         name="experience"
         ngModel
         type="number"
@@ -114,7 +126,10 @@
         class="form-control"
         placeholder="Experience"
       />
-      <div *ngIf="" class="text-danger fs-6 fst-italic">
+      <div
+        *ngIf="!experience.valid && experience.touched"
+        class="text-danger fs-6 fst-italic"
+      >
         Please provide number of experience required
       </div>
     </div>
@@ -123,8 +138,8 @@
     <div class="mb-3">
       <label class="form-label">Thumbnail</label>
       <input
-        [ngClass]=""
-        #thumbnail=""
+        [ngClass]="{ 'is-invalid': !thumbnail.valid && thumbnail.touched }"
+        #thumbnail="ngModel"
         name="thumbnail"
         ngModel
         type="text"
@@ -140,8 +155,8 @@
     <div class="mb-3">
       <label class="form-label">Date</label>
       <input
-        [ngClass]=""
-        #rating=""
+        [ngClass]="{ 'is-invalid': !date.valid && date.touched }"
+        #date="ngModel"
         name="DatePosted"
         ngModel
         type="date"
@@ -155,7 +170,11 @@
     </div>
 
     <div class="mb-3">
-      <button [disabled]="" type="submit" class="btn btn-primary mb-3">
+      <button
+        [disabled]="!f.valid"
+        type="submit"
+        class="btn btn-primary mb-3 btn_background form_submit_btn"
+      >
         Post new Job
       </button>
     </div>

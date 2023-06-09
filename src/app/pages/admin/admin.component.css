@@ -1,0 +1,16 @@
+.form_submit_btn {
+  border-radius: 10px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #9abb60;
+  color: #000;
+  transition: background-color 0.5s, color 0.5s;
+  text-align: center;
+  width: 150px;
+  height: 40px;
+}
+
+.form_submit_btn:hover {
+  background-color: #647a3d;
+  color: #fff;
+}
