@@ -15,6 +15,7 @@
         <app-card
           (onCardSelect)="handleCardSelect($event)"
           [card]="cardItem"
+          (onCardDeleted)="handleCardDelete($event)"
         ></app-card>
       </div>
     </div>

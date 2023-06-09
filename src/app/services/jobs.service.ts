@@ -111,6 +111,12 @@ export class JobsService {
     );
   }
 
+  deleteJobById(jobId: string): Observable<any> {
+    return this.http.delete(
+      `https://karyahunt-add5f-default-rtdb.firebaseio.com/jobs/${jobId}.json`
+    );
+  }
+
   //posting a data to the database
   addNewJob(job: any): Observable<any> {
     return this.http.post(

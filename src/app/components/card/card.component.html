@@ -24,5 +24,11 @@
       >More Info</a
     >
     <button (click)="handleClick()" class="ms-3 btn">Apply</button>
+    <button
+      (click)="handleDelete(card.id.toString())"
+      class="ms-3 btn btn-danger"
+    >
+      Delete
+    </button>
   </div>
 </div>

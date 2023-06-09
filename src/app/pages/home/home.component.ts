@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { JobsService } from 'src/app/services/jobs.service';
 import { Card } from 'src/app/card.model';
 
@@ -23,5 +23,11 @@ export class HomeComponent {
 
   handleCardSelect(card: Card) {
     this.currentSelectedCard = card;
+  }
+  handleCardDelete(cardId: string) {
+    // Delete the card from the UI
+    this.cards$ = this.cards$.pipe(
+      map((cards: Card[]) => cards.filter((card) => card.id !== cardId))
+    );
   }
 }
