@@ -1,5 +1,5 @@
 <div class="container mt-4">
-  <h1 class="mb-4">Post new Job</h1>
+  <h1 class="mb-4">Post new Job 📝</h1>
 
   <form #f="ngForm" (ngSubmit)="onFormSubmit(f)">
     <div class="mb-3">
@@ -23,19 +23,16 @@
       <label class="form-label">Job Description</label>
       <input
         required
-        #description="ngModel"
-        [ngClass]="{ 'is-invalid': !description.valid && description.touched }"
-        name="description"
+        #subTitle="ngModel"
+        [ngClass]="{ 'is-invalid': !subTitle.valid && subTitle.touched }"
+        name="subTitle"
         ngModel
         type="text"
         class="form-control"
-        placeholder="Job Description"
+        placeholder="Job SubTitle"
       />
-      <div
-        *ngIf="!description.valid && description.touched"
-        class="text-danger"
-      >
-        Description is required
+      <div *ngIf="!subTitle.valid && subTitle.touched" class="text-danger">
+        SubTitle is required
       </div>
     </div>
     <!-- location -->
@@ -44,7 +41,7 @@
       <label class="form-label">Location</label>
       <select
         name="location"
-        [ngClass]="{ 'is-invalid': !location.valid && !location.touched }"
+        [ngClass]="{ 'is-invalid': !location.valid && location.touched }"
         #location="ngModel"
         ngModel
         required
@@ -70,7 +67,7 @@
         <option value="Chennai, India">Chennai, India</option>
       </select>
       <div
-        *ngIf="!location.valid && !location.touched"
+        *ngIf="!location.valid && location.touched"
         class="text-danger fs-6 fst-italic"
       >
         Please provide a location
@@ -157,7 +154,7 @@
       <input
         [ngClass]="{ 'is-invalid': !date.valid && date.touched }"
         #date="ngModel"
-        name="DatePosted"
+        name="date"
         ngModel
         type="date"
         required

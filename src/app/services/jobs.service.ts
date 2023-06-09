@@ -104,4 +104,18 @@ export class JobsService {
         })
       );
   }
+  //geta  single job using id
+  getJobById(jobId: string): Observable<any> {
+    return this.http.get(
+      `https://karyahunt-add5f-default-rtdb.firebaseio.com/jobs/${jobId}.json`
+    );
+  }
+
+  //posting a data to the database
+  addNewJob(job: any): Observable<any> {
+    return this.http.post(
+      'https://karyahunt-add5f-default-rtdb.firebaseio.com/jobs.json',
+      job
+    );
+  }
 }

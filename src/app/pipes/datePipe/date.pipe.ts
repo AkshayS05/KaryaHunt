@@ -5,6 +5,12 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class DatePipe implements PipeTransform {
   transform(value: Date | string): string {
+    console.log(value.toLocaleString);
+    if (!value) {
+      console.log(value);
+      return 'Posted Today';
+    }
+
     const dateObj = typeof value === 'string' ? new Date(value) : value;
 
     if (isNaN(dateObj.getTime())) {
